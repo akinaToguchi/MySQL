@@ -1,0 +1,23 @@
+#Ejercicio 1 
+#a-
+alter table facturas 
+	change clienteId idCliente INT,
+	CHANGE articuloId idArticulo INT,
+    MODIFY monto DOUBLE UNSIGNED;
+desc facturas;
+
+#Ejercicio 2
+alter table articulos
+	change articuloId idArticulos int,
+    modify nombre varchar(75),
+    modify precio double unsigned not null,
+    modify stock int unsigned not null;
+desc articulos;
+
+#Ejercicio 3 
+alter table clientes 
+	change CLIENTEID IDCLIENTE int,
+	modify NOMBRE VARCHAR(30) not null,
+	modify APELLIDO VARCHAR(35) not null,
+	change COMENTARIOS OBSERVACIONES varchar(255);
+desc clientes;

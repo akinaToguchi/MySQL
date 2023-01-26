@@ -1,0 +1,21 @@
+	#Ejercicio 3
+
+# Punto 1
+select concat(apellido, ', ', nombre) empleado, year(fecha_ingreso) as ingreso, 
+timestampdiff(year,fecha_ingreso, curdate()) as antiguedad from empleados order by ingreso desc;
+
+
+# Punto 2
+select min(precio) 'Menor precio' from libros;
+
+# Punto 3
+select min(precio) 'Menor precio', max(precio) 'Mayor precio' from libros;
+
+# Punto 4
+select min(precio) 'Menor precio', max(precio) 'Mayor precio', round(avg(precio), 2) as 'precio promedio' from libros;
+
+# Punto 5
+select categoria, min(precio) 'menor precio', max(precio) 'Mayor precio', round(avg(precio), 2) as 'precio promedio' from libros; group by categoria;
+
+# Punto 6
+select categoria, min(precio) 'menor precio', max(precio) 'Mayor precio', round(avg(precio), 2) as 'precio promedio' from libros group by categoria having categoria <> 'sin asignar';

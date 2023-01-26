@@ -1,0 +1,16 @@
+
+	# Ejercicio 2
+# Punto 1
+select concat(apellido, ', ', nombre) autor, provincia from autores order by autor;
+
+# Punto 2
+select concat_ws(', ', apellido, nombre) autor, provincia from autores order by autor;
+
+# Punto 3
+select upper(concat_ws(', ', apellido, nombre)) autor, provincia from autores order by autor;
+
+# Punto 4
+select upper(concat(apellido, ', ', left(nombre, 1), '.')) autor, provincia from autores order by autor;
+
+# Punto 5
+select concat(apellido, ', ', nombre) empleado, year(fecha_ingreso) as ingreso from empleados order by ingreso desc;

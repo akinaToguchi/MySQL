@@ -1,0 +1,21 @@
+
+	# Ejercicio 2
+use bonus_track;
+
+# Mostrar artista, titulo, genero. Ordenar alfabéticamente artista y titulo. mostrar primero 10 canciones.
+select artista, titulo, genero from top_spotify order by artista asc, titulo asc limit 10;
+
+# Modificar la consulta anterior para mostrar únicamente las canciones ubicadas desde la posición 11 hasta la 15 inclusive.
+select artista, titulo, genero from top_spotify order by artista asc, titulo asc limit 5 offset 10;
+
+# Obtener una  lista de todas aquellas canciones pertenecientes a la cantante Madonna. 
+select * from top_spotify where artista="Madonna";
+
+# Obtener una  lista de todas aquellas canciones pertenecientes pop. ordenar alfabeticamente 
+select * from top_spotify where genero="Pop" order by titulo asc;
+
+# Genero pop. lanzadas durante el año 2015, Mostrar todos los campos, ordenar alfabeticamente titulo y artista
+select * from top_spotify where genero="Pop" and ano=2015 order by artista asc, titulo asc;
+
+# Antes 2014, genero dance pop, todos los campos, ordenar canciones alfabeticamente
+select * from top_spotify where ano < 2011 AND genero = 'Dance pop' order by titulo asc;

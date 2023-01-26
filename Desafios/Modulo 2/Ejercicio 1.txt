@@ -1,0 +1,15 @@
+
+	# Ejercicio 1
+use bonus_track;
+
+# Mostrar todo el contenido
+select * from top_spotify;
+
+# Mostrar artista, titulo, genero
+select artista, titulo, genero from top_spotify;
+
+# Ordenar alfabéticamente por género
+select * from top_spotify order by genero asc;
+
+# Ordenar alfabéticamente por género y alfabéticamente los nombres de los artistas.
+select * from top_spotify order by genero asc, artista asc;

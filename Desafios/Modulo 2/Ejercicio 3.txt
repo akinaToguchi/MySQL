@@ -1,0 +1,34 @@
+
+	# Ejercicio 3
+use libreria;
+
+# Autores nacidos en BA.
+select * from autores where ciudad = 'buenos aires';
+
+#Libros mayor 30$, ordenra de mayor a menor
+select * from libros where precio>30 order by precio asc;
+
+# Autores cuya cuidad sea != BA. Ordenar las provincias alfabéticamente.
+select * from autores  where provincia != 'buenos aires' order by provincia;
+
+# Libro categoria=cuentos, precio menor 20. Ordenar alfabéticamente los títulos. 
+select * from libros  where categoria = 'cuentos' and precio < 20 order by titulo;
+
+# Libro categorías= novelas o ensayos. Ordenar alfabéticamente resultado.
+select * from libros  where categoria = 'novelas' or categoria = 'ensayos' order by titulo;
+
+# libros cuyo precio este entre 20 y 35, ordenar precio menor mayor
+select * from libros where precio between 20 and 35 order by precio;   
+
+# libros cuyo autor sea jorge luis, victoria, ernesto, adolfo, ordear alfabeticamente
+select * from autores  where nombre in ('jorge luis', 'victoria', 'ernesto', 'adolfo') order by nombre; 
+
+# Libro cuyo titulo contenga mundo, ordenar alfabeticamente.
+select * from libros  where titulo like '%mundo%' order by titulo;  
+ 
+# Libros cuyo titulo contenga "de", ordenar alfabeticamente.
+select * from libros where titulo like '% de %' order by titulo;
+
+# Libros precio = null, ordenar alfabeticamente.
+select * from libros  where precio is null order by titulo;
+

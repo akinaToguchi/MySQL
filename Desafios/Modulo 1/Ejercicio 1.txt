@@ -1,0 +1,27 @@
+# Ejercicio 1
+
+CREATE DATABASE BONUS_TRACK;
+USE BONUS_TRACK;
+
+create table agenda(
+	IdContacto INT PRIMARY KEY,
+    Nombre VARCHAR(20) NOT NULL,
+    Apellido VARCHAR(15) NOT NULL,
+    Domicilio VARCHAR(50),
+    Telefono INT)
+    ;
+
+/* 4 - Hola, soy un comentario */
+
+SHOW TABLES;
+
+SELECT * FROM agenda;
+
+ALTER TABLE agenda ADD Mail VARCHAR(50) NOT NULL;
+SELECT * FROM agenda;
+
+INSERT INTO agenda VALUES (1, 'Nombre1', 'Apellido1', 'Calle 123', 11111111, "email1@gmai.com"),
+							(2, 'Nombre2', 'Apellido2', 'Calle 234', 22222222, "email2@gmai.com"),
+                            (3, 'Nombre3', 'Apellido3', 'Calle 345', 33333333, "email3@gmai.com"),
+                            (4, 'Nombre4', 'Apellido4', 'Calle 456', 44444444, "email4@gmai.com")
+                            ;

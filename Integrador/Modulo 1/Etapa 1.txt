@@ -1,0 +1,47 @@
+
+#Ejercicio 1
+CREATE DATABASE LABORATORIO;
+
+#Ejercicio 2
+USE LABORATORIO;
+
+#Ejercicio 3
+create table facturas(
+	letra char,
+    numero int,
+    clienteId int,
+    articuloId int,
+    fecha date,
+    monto double,
+    primary key(letra, numero)
+);
+    
+#Ejercicio 4
+create table articulos (
+	articuloId int primary key,
+	nombre varchar(50),
+	precio double,
+	stock int
+);
+    
+#Ejercicio 5
+create table clientes(
+	clienteId int primary key,
+	nombre VARCHAR(25),
+	apellido VARCHAR(25),
+	cuit CHAR(16),
+	direccion VARCHAR(50),
+	comentarios VARCHAR(50)
+);
+
+#Ejercicio 6
+SHOW DATABASES;
+
+#Ejercicio 7
+show tables from LABORATORIO;
+
+#Ejercicio 8
+# show tables; -> se puede utilizar ya que estamos usando la bd "LABORATORIO"
+
+#Ejercicio 9
+desc clientes;
